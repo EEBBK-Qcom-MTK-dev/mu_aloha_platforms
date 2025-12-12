@@ -1,0 +1,20 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = PlatformConfigurationMapLib
+  FILE_GUID                      = F5176D9C-39FE-45BC-BE78-35C32D4F1A7F
+  MODULE_TYPE                    = BASE
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = PlatformConfigurationMapLib
+
+[Sources]
+  PlatformConfigurationMapLib.c
+
+[Packages]
+  ArmPkg/ArmPkg.dec
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  EmbeddedPkg/EmbeddedPkg.dec
+  AndromedaPkg/AndromedaPkg.dec
+
+[LibraryClasses]
+  BaseLib
