@@ -6,7 +6,7 @@ gAndromedaPkgTokenSpaceGuid.PcdMipiFrameBufferHeight|2176
 gAndromedaPkgTokenSpaceGuid.PcdSmbiosSystemBrand|"EEBBK"
 gAndromedaPkgTokenSpaceGuid.PcdSmbiosSystemRetailSku|"MP"
 gAndromedaPkgTokenSpaceGuid.PcdSmbiosSystemModel|"S6"
-gAndromedaPkgTokenSpaceGuid.PcdSmbiosSystemRetailModel|"sm6150"
+gAndromedaPkgTokenSpaceGuid.PcdSmbiosSystemRetailModel|"sm7150"
 gAndromedaPkgTokenSpaceGuid.PcdSmbiosProcessorRetailModel|"SM7150-AB"
 gAndromedaPkgTokenSpaceGuid.PcdSmbiosProcessorModel|"Snapdragon (TM) 730G @ 2.20 GHz"
 gAndromedaPkgTokenSpaceGuid.PcdABLProduct|"EEBBK S6"
