@@ -100,14 +100,16 @@ INF MooreaPkg/Device/$(TARGET_DEVICE)/PatchedBinaries/UFSDxe.inf
 
 # DXE without depex
 FILE DRIVER = 6b38f7b4-ad98-40e9-9093-aca2b5a253c4 {
-    SECTION PE32 = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/DiskIoDxe/DiskIoDxe.efi
     SECTION UI = "DiskIoDxe"
+    SECTION PE32 = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.efi    
 }
 
+
 FILE DRIVER = 1fa1f39e-feff-4aae-bd7b-38a070a3b609 {
-    SECTION PE32 = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/PartitionDxe/PartitionDxe.efi
     SECTION UI = "PartitionDxe"
-}
+    SECTION PE32 = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/MdeModulePkg/Universal/Disk/PartitionDxe/PartitionDxe.efi
+     }
+
 
 FILE DRIVER = 3adf8dda-1850-44c5-8c63-bb991849bc6f {
     SECTION UI = "HashDxe"
