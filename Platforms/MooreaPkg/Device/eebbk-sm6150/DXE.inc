@@ -6,7 +6,7 @@
 #}
 
 INF Rennell/BOOT.XF.3.1.1-00014-SC7180XWZB-1/QcomPkg/Drivers/AdapterInformationDxe/AdapterInformationDxe.inf
-INF Rennell/BOOT.XF.3.1.1-00014-SC7180XWZB-1/QcomPkg/Drivers/CPRDxe/CPRDxe.inf
+#INF Rennell/BOOT.XF.3.1.1-00014-SC7180XWZB-1/QcomPkg/Drivers/CPRDxe/CPRDxe.inf
 INF Rennell/BOOT.XF.3.1.1-00014-SC7180XWZB-1/QcomPkg/Drivers/OSConfigDxe/OSConfigDxe.inf
 INF Rennell/BOOT.XF.3.1.1-00014-SC7180XWZB-1/QcomPkg/Drivers/ShmBridgeDxe/ShmBridgeDxe.inf
 INF Rennell/BOOT.XF.3.1.1-00014-SC7180XWZB-1/QcomPkg/Drivers/UsbDeviceDxe/UsbDeviceDxe.inf
@@ -100,12 +100,12 @@ INF MooreaPkg/Device/$(TARGET_DEVICE)/PatchedBinaries/UFSDxe.inf
 
 # DXE without depex
 FILE DRIVER = 6b38f7b4-ad98-40e9-9093-aca2b5a253c4 {
-    SECTION PE32 = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.efi
+    SECTION PE32 = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/DiskIoDxe/DiskIoDxe.efi
     SECTION UI = "DiskIoDxe"
 }
 
 FILE DRIVER = 1fa1f39e-feff-4aae-bd7b-38a070a3b609 {
-    SECTION PE32 = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/MdeModulePkg/Universal/Disk/PartitionDxe/PartitionDxe.efi
+    SECTION PE32 = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/PartitionDxe/PartitionDxe.efi
     SECTION UI = "PartitionDxe"
 }
 
@@ -214,13 +214,55 @@ FILE FREEFORM = 6AA4C932-31FA-4136-9F8F-0954BB55C2F3 {
 
 FILE FREEFORM = CF65ABBD-9041-464B-84F4-2ACD1AC44A0D {
     SECTION UI = "Panel_sharp_qsync_fhd_vid.xml"
-    SECTION RAW = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/RawFiles/Panel_sharp_qsync_fhd_vid.xml
+    SECTION RAW = RawFiles/Panel_sharp_qsync_fhd_vid.xml
 }
 
 
 FILE FREEFORM = F898317F-88CE-4839-89ED-B80E94E4CBBC {
     SECTION UI = "Panel_sharp_qsync_fhd_cmd.xml"
-    SECTION RAW = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/RawFiles/Panel_sharp_qsync_fhd_cmd.xml
+    SECTION RAW = RawFiles/Panel_sharp_qsync_fhd_cmd.xml
+}
+
+
+FILE FREEFORM = 3E5584ED-05D4-4267-9048-0D47F76F4248 {
+    SECTION UI = "battery_symbol_Soc10.bmp"
+    SECTION RAW = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/RawFiles/battery_symbol_Soc10.bmp
+}
+
+
+FILE FREEFORM = 4753E815-DDD8-402D-BF69-9B8C4EB7573E {
+    SECTION UI = "battery_symbol_NoBattery.bmp"
+    SECTION RAW = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/RawFiles/battery_symbol_NoBattery.bmp
+}
+
+
+FILE FREEFORM = 03DED53E-BECD-428F-9F79-5ABA64C58445 {
+    SECTION UI = "battery_symbol_Nocharger.bmp"
+    SECTION RAW = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/RawFiles/battery_symbol_Nocharger.bmp
+}
+
+
+FILE FREEFORM = 8B86CD38-C772-4FCF-85AA-345B2B3C1AB4 {
+    SECTION UI = "battery_symbol_LowBatteryCharging.bmp"
+    SECTION RAW = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/RawFiles/battery_symbol_LowBatteryCharging.bmp
+}
+
+
+FILE FREEFORM = 3FD97907-93F1-4349-AF3C-3B68B0A5E626 {
+    SECTION UI = "battery_symbol_LowBattery.bmp"
+    SECTION RAW = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/RawFiles/battery_symbol_LowBattery.bmp
+}
+
+
+FILE FREEFORM = E2EA5A4F-98BD-4203-AB49-399505DDFB7D {
+    SECTION UI = "tsens_thermal_symbol.bmp"
+    SECTION RAW = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/RawFiles/tsens_thermal_symbol.bmp
+}
+
+
+FILE FREEFORM = C72FB1A9-5527-4E13-BAC4-F671D0330145 {
+    SECTION UI = "tsens_thermal_err_symbol.bmp"
+    SECTION RAW = MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/RawFiles/tsens_thermal_err_symbol.bmp
 }
 
 

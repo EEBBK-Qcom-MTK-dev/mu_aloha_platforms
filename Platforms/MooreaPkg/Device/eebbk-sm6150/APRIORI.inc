@@ -4,8 +4,8 @@ APRIORI DXE {
     INF MdeModulePkg/Universal/PCD/Dxe/Pcd.inf
     INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/EnvDxe/EnvDxe.inf
 
-#    INF MdeModulePkg/Universal/ReportStatusCodeRouter/RuntimeDxe/ReportStatusCodeRouterRuntimeDxe.inf
-#    INF MdeModulePkg/Universal/StatusCodeHandler/RuntimeDxe/StatusCodeHandlerRuntimeDxe.inf
+#    INF MdeModulePkg/Universal/ReportStatusCodeRouter/RuntimeDxe/RscRtDxe.inf
+#    INF MdeModulePkg/Universal/StatusCodeHandler/RuntimeDxe/SCHandlerRtDxe.inf
     INF MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
 
     # Next, install cpu protocol and enable the interrupt controller
@@ -15,6 +15,7 @@ APRIORI DXE {
     # Core Drivers
     INF EmbeddedPkg/MetronomeDxe/MetronomeDxe.inf
     INF ArmPkg/Drivers/TimerDxe/TimerDxe.inf
+
     INF AndromedaPkg/Driver/RamPartitionDxe/RamPartitionDxe.inf
     INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/SmemDxe/SmemDxe.inf
     INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/DALSYSDxe/DALSYSDxe.inf
@@ -45,11 +46,10 @@ APRIORI DXE {
 
     INF MdeModulePkg/Universal/Disk/UnicodeCollation/EnglishDxe/EnglishDxe.inf
     INF MdeModulePkg/Universal/FvSimpleFileSystemDxe/FvSimpleFileSystemDxe.inf
+
     INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/SdccDxe/SdccDxe.inf
     INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/UFSDxe/UFSDxe.inf
     INF FatPkg/EnhancedFatDxe/Fat.inf
-
-#   INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/VerifiedBootDxe/VerifiedBootDxe.inf
 
     INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/TzDxe/TzDxeLA.inf
     INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/QcomWDogDxe/QcomWDogDxe.inf
@@ -62,7 +62,7 @@ APRIORI DXE {
     INF MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe.inf
 
     INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/PILDxe/PILDxe.inf
-    INF Rennell/BOOT.XF.3.1.1-00014-SC7180XWZB-1/QcomPkg/Drivers/CPRDxe/CPRDxe.inf
+#    INF Rennell/BOOT.XF.3.1.1-00014-SC7180XWZB-1/QcomPkg/Drivers/CPRDxe/CPRDxe.inf
     INF MdeModulePkg/Universal/WatchdogTimerDxe/WatchdogTimer.inf
     INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/EmbeddedMonotonicCounter/EmbeddedMonotonicCounter.inf
     INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/EmbeddedPkg/RealTimeClockRuntimeDxe/RealTimeClockRuntimeDxe.inf
@@ -124,11 +124,8 @@ APRIORI DXE {
 
     INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/TsensDxe/TsensDxe.inf
 
-!if $(USE_SIMPLEFBDXE) == false
-    INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/DisplayDxe/DisplayDxe.inf
-!else 
+#    INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/DisplayDxe/DisplayDxe.inf
     INF AndromedaPkg/Driver/SimpleFbDxe/SimpleFbDxe.inf
-!endif
 
     INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/LimitsDxe/LimitsDxe.inf
     INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/GpiDxe/GpiDxe.inf
