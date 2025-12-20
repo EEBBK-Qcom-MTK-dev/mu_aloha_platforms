@@ -4,8 +4,8 @@ APRIORI DXE {
     INF MdeModulePkg/Universal/PCD/Dxe/Pcd.inf
     INF MooreaPkg/Device/$(TARGET_DEVICE)/Binaries/QcomPkg/Drivers/EnvDxe/EnvDxe.inf
 
-#    INF MdeModulePkg/Universal/ReportStatusCodeRouter/RuntimeDxe/RscRtDxe.inf
-#    INF MdeModulePkg/Universal/StatusCodeHandler/RuntimeDxe/SCHandlerRtDxe.inf
+    INF MdeModulePkg/Universal/ReportStatusCodeRouter/RuntimeDxe/RscRtDxe.inf
+    INF MdeModulePkg/Universal/StatusCodeHandler/RuntimeDxe/SCHandlerRtDxe.inf
     INF MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
 
     # Next, install cpu protocol and enable the interrupt controller
